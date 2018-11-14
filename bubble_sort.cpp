@@ -12,7 +12,7 @@ int main()
     int arr[arrsize];
 	do
 	{
-		cout<<"\n\n\n enter your choice \n 1.Accept \n 2.Display \n 3.Selection sort. \n 0.exit.";
+		cout<<"\n\n\n enter your choice \n 1.Accept \n 2.Display \n 3.Bubble sort. \n 0.exit.";
 		cin>>c;
 		switch(c)
 		{
@@ -59,7 +59,19 @@ int main()
 		}
 
 void bubblesort(int *arr,int arrsize){
-
+    int temp;
+		for(int i=0;i<arrsize-1;i++)
+		for(int j=0;j<arrsize-i-1;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+			      temp=arr[j];
+			      arr[j]=arr[j+1];
+			      arr[j+1]=temp;
+			}
+		}
+        display(arr,arrsize);
+        cout<<"\n";
 
 }
 
