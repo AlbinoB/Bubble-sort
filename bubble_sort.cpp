@@ -32,7 +32,8 @@ int main()
 
 			 default:{
 					cout<<"\n wrong input entered!!!";
-					break;
+
+
 				      }
 		}
 	    cout<<"\n___________________________________________________\n";
@@ -61,7 +62,9 @@ int main()
 void bubblesort(int *arr,int arrsize){
     int temp;
 		for(int i=0;i<arrsize-1;i++)
-		for(int j=0;j<arrsize-i-1;j++)
+        {
+            cout<<"\n pass:"<<i+1<<":\n";
+            for(int j=0;j<arrsize-i-1;j++)
 		{
 			if(arr[j]>arr[j+1])
 			{
@@ -69,9 +72,12 @@ void bubblesort(int *arr,int arrsize){
 			      arr[j]=arr[j+1];
 			      arr[j+1]=temp;
 			}
+			display(arr,arrsize);
+            cout<<"\n";
 		}
-        display(arr,arrsize);
-        cout<<"\n";
+        }
+
+
 
 }
 
